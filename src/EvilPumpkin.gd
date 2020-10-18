@@ -1,10 +1,16 @@
 extends RigidBody2D
 
 
-signal player_hit
+signal timmy_hit
+
+onready var _raycasts := [$LeftRayCast, $RightRayCast, $UpRayCast]
+
+func _ready():
+	apply_impulse(Vector2.ZERO, Vector2(-400, 0))
 
 
-	#apply_impulse(Vector2.ZERO, Vector2(200, 0))
+func _physics_process(_delta):
+	for raycast in _raycasts:
+		if raycast.is_colliding():
+			emit_signal("timmy_hit")
 
-func _on_EvilPumpkin_body_entered(_body):
-	emit_signal("player_hit")

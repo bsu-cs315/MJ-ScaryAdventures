@@ -15,8 +15,23 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.117431, 3.49293 )
+position = Vector2( 0, 3.49293 )
 rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
-[connection signal="body_entered" from="." to="." method="_on_EvilPumpkin_body_entered"]
+
+[node name="LeftRayCast" type="RayCast2D" parent="."]
+position = Vector2( 24.1398, 3.87346 )
+rotation = 1.5708
+enabled = true
+
+[node name="UpRayCast" type="RayCast2D" parent="."]
+position = Vector2( 1.13687e-13, 19.894 )
+rotation = 3.14159
+scale = Vector2( 1, 0.75 )
+enabled = true
+
+[node name="RightRayCast" type="RayCast2D" parent="."]
+position = Vector2( -24.0173, 4.25224 )
+rotation = -1.5708
+enabled = true
