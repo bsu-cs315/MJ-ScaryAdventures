@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Timmy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/blockBrown_broken.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/flagRed.png" type="Texture" id=4]
 [ext_resource path="res://src/LevelTwo.gd" type="Script" id=5]
 [ext_resource path="res://assets/kisspng-jack-skellington-halloween-pumpkin-costume-party-c-halloween-ghost-town-5a917aec4cdcf1.8673684015194836283148.png" type="Texture" id=6]
+[ext_resource path="res://assets/sounds/creepy_background.ogg" type="AudioStream" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -118,6 +119,9 @@ texture = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishFlag"]
 position = Vector2( 0, -8 )
 shape = SubResource( 3 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 [connection signal="throw_pumpkin" from="Timmy" to="." method="_on_throw_pumpkin"]
 [connection signal="timmy_hit" from="EvilPumpkin" to="." method="_on_timmy_hit"]
 [connection signal="timmy_hit" from="EvilPumpkin2" to="." method="_on_timmy_hit"]

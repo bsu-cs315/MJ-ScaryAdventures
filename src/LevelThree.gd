@@ -1,6 +1,8 @@
 extends Node2D
 
+var _pumpkin_shot := false
 
+onready var _music := $BackgroundMusic
 onready var _timmy := $Timmy
 onready var _evil_pumpkins := [
 		$EvilPumpkin,
@@ -14,12 +16,16 @@ onready var _evil_pumpkins := [
 ]
 
 
-func _on_timmy_hit():
+func _ready() -> void:
+	_music.play()
+
+
+func _on_timmy_hit() ->  void:
 	_timmy.die()
 	var _ignored = get_tree().change_scene("res://src/LosingScreen.tscn")
 
 
-func _on_throw_pumpkin(evil_pumpkin):
+func _on_throw_pumpkin(evil_pumpkin: Node) -> void:
 	var next_pumpkin: RigidBody2D
 	for pumpkin in _evil_pumpkins:
 		if pumpkin == evil_pumpkin:
@@ -30,5 +36,5 @@ func _on_throw_pumpkin(evil_pumpkin):
 		next_pumpkin.start_timer()
 
 
-func _on_FinishFlag_entered(_body):
+func _on_FinishFlag_entered(_body: Node) -> void:
 	var _ignored = get_tree().change_scene("res://src/WinningScreen.tscn")

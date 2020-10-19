@@ -17,7 +17,7 @@ onready var _raycasts := [
 ]
 
 
-func _physics_process(_delta) -> void:
+func _physics_process(_delta: float) -> void:
 	_check_for_collisions()
 
 
@@ -41,5 +41,5 @@ func _check_for_collisions() -> void:
 		
 
 
-func _delete_pumpkin():
+func _delete_pumpkin() -> void:
 	queue_free()

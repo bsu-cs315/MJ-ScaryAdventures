@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/kisspng-jack-skellington-halloween-pumpkin-costume-party-c-halloween-ghost-town-5a917aec4cdcf1.8673684015194836283148.png" type="Texture" id=3]
 [ext_resource path="res://assets/witch.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/happy_halloween.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -70,4 +71,8 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HappyHalloweenSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]

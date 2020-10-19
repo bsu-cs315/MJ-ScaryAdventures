@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/EndGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/kisspng-jack-skellington-halloween-pumpkin-costume-party-c-halloween-ghost-town-5a917aec4cdcf1.8673684015194836283148.png" type="Texture" id=3]
+[ext_resource path="res://assets/sounds/you_win.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -56,4 +57,8 @@ text = "Back To Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="YouWinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

@@ -23,7 +23,7 @@ onready var _sprite := $Sprite
 onready var _raycast := $RayCast2D
 
 
-func _physics_process(delta: float):
+func _physics_process(delta: float) -> void:
 	_handle_vertical_movement(delta)
 	_handle_horizontal_movement()
 	_velocity = move_and_slide(_velocity, Vector2.UP)
@@ -55,7 +55,7 @@ func _handle_vertical_movement(delta: float) -> void:
 	_is_grounded = true if is_on_floor() else false
 
 
-func _is_an_evil_pumpkin(pumpkin_name) -> bool:
+func _is_an_evil_pumpkin(pumpkin_name: String) -> bool:
 	for name in EVIL_PUMPKIN_NAMES:
 		if name == pumpkin_name:
 			return true
