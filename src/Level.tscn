@@ -9,6 +9,7 @@
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="TileSet" id=2]
+resource_local_to_scene = true
 0/name = "blockBrown_broken.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -34,15 +35,53 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2568.0
+margin_bottom = 640.0
+color = Color( 0.701961, 0.466667, 0.0588235, 0.87451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0 )
+tile_data = PoolIntArray( 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, 458751, 0, 0, 524287, 0, 0, 589823, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0 )
 
-[node name="EvilPumpkin" parent="." instance=ExtResource( 2 )]
-position = Vector2( 956.778, 531.157 )
-mode = 2
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -72.0
+margin_top = -72.0
+margin_right = 2304.0
+margin_bottom = 536.0
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timmy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 112.126, 536.606 )
+position = Vector2( 32, 544 )
+
+[node name="EvilPumpkin" parent="." instance=ExtResource( 2 )]
+position = Vector2( 792, 552 )
+mode = 2
+
+[node name="EvilPumpkin2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1064, 552 )
+
+[node name="EvilPumpkin3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1368, 552 )
+
+[node name="EvilPumpkin4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1704, 552 )
+
+[node name="EvilPumpkin5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2072, 552 )
+[connection signal="throw_pumpkin" from="Timmy" to="." method="_on_throw_pumpkin"]
 [connection signal="timmy_hit" from="EvilPumpkin" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin2" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin3" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin4" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin5" to="." method="_on_timmy_hit"]

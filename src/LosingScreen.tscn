@@ -1,19 +1,56 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/kisspng-jack-skellington-halloween-pumpkin-costume-party-c-halloween-ghost-town-5a917aec4cdcf1.8673684015194836283148.png" type="Texture" id=3]
+[ext_resource path="res://assets/witch.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
 
 [node name="LosingScreen" type="CanvasLayer"]
 script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1030.0
+margin_bottom = 603.0
+color = Color( 0.72549, 0.498039, 0.172549, 0.92549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Witch" type="TextureRect" parent="."]
+margin_left = 747.981
+margin_top = 70.984
+margin_right = 984.981
+margin_bottom = 215.984
+texture = ExtResource( 4 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HalloweenBackground" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 600.0
+texture = ExtResource( 3 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MainMenuButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -68.0
-margin_top = 50.0
-margin_right = 68.0
-margin_bottom = 70.0
+margin_left = -2.4841
+margin_top = 57.5595
+margin_right = 133.516
+margin_bottom = 77.5595
 text = "Back To Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,10 +61,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -40.0
-margin_top = -24.0
-margin_right = 40.0
-margin_bottom = 24.0
+margin_left = -3.4624
+margin_top = -84.4762
+margin_right = 148.538
+margin_bottom = 32.5238
+custom_fonts/font = SubResource( 1 )
 text = "Game Over!
 Timmy died!
 "

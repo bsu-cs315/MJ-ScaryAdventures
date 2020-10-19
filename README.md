@@ -18,8 +18,8 @@
 - [X] C-6: The game is stable and includes some gameplay.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [ ] B-2: The source code and project structure comply with our adopted style guides.
-- [ ] B-3: The game runs to a clear end state.
-- [ ] A-1: The game includes a complete traditional player experience loop&mdash;title, gameplay, and ending&mdash;and the player has the option to play again.
+- [X] B-3: The game runs to a clear end state.
+- [X] A-1: The game includes a complete traditional player experience loop&mdash;title, gameplay, and ending&mdash;and the player has the option to play again.
 
 ## Third Part Assets
 - All images from [Kenny Physics Pack](https://www.kenney.nl/assets/physics-assets) and [FreePNG Images](https://www.freepngimg.com/) are liscensed under [CC 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)

@@ -21,17 +21,48 @@ scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="LeftRayCast" type="RayCast2D" parent="."]
-position = Vector2( 24.1398, 3.87346 )
+position = Vector2( 24.1398, 3.13768 )
 rotation = 1.5708
+scale = Vector2( 1.5, 1 )
 enabled = true
 
 [node name="UpRayCast" type="RayCast2D" parent="."]
 position = Vector2( 1.13687e-13, 19.894 )
 rotation = 3.14159
-scale = Vector2( 1, 0.75 )
+scale = Vector2( 1.75, 0.75 )
 enabled = true
 
 [node name="RightRayCast" type="RayCast2D" parent="."]
 position = Vector2( -24.0173, 4.25224 )
 rotation = -1.5708
+scale = Vector2( 1.75, 1 )
+enabled = true
+
+[node name="DownRayCast" type="RayCast2D" parent="."]
+position = Vector2( 0, -12.918 )
+scale = Vector2( 1.75, 0.75 )
+enabled = true
+
+[node name="TLRayCast" type="RayCast2D" parent="."]
+position = Vector2( 8.35216, 13.8089 )
+rotation = 2.35619
+scale = Vector2( 1.75, 0.75 )
+enabled = true
+
+[node name="BLRayCast" type="RayCast2D" parent="."]
+position = Vector2( 7.12719, -7.23856 )
+rotation = 0.785398
+scale = Vector2( 1.75, 0.75 )
+enabled = true
+
+[node name="TRRayCast" type="RayCast2D" parent="."]
+position = Vector2( -7.79538, 13.9203 )
+rotation = -2.35619
+scale = Vector2( 1.75, 0.75 )
+enabled = true
+
+[node name="BRRayCast" type="RayCast2D" parent="."]
+position = Vector2( -7.79536, -6.01357 )
+rotation = -0.785398
+scale = Vector2( 1.75, 0.75 )
 enabled = true
