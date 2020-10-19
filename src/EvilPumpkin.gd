@@ -4,7 +4,7 @@ extends RigidBody2D
 signal timmy_hit
 
 onready var _can_throw := true
-onready var _is_done := false
+onready var _timer := $Timer
 onready var _raycasts := [
 		$LeftRayCast,
 		$RightRayCast,
@@ -29,9 +29,17 @@ func can_throw() -> bool:
 	return _can_throw
 
 
+func start_timer() -> void:
+	_timer.start()
+
+
 func _check_for_collisions() -> void:
 	for raycast in _raycasts:
 		if raycast.is_colliding():
 			if raycast.get_collider().name == "Timmy":
 				emit_signal("timmy_hit")
 		
+
+
+func _delete_pumpkin():
+	queue_free()

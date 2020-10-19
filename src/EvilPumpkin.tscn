@@ -66,3 +66,8 @@ position = Vector2( -7.79536, -6.01357 )
 rotation = -0.785398
 scale = Vector2( 1.75, 0.75 )
 enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_delete_pumpkin"]

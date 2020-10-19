@@ -9,7 +9,10 @@ const EVIL_PUMPKIN_NAMES := [
 	"EvilPumpkin2", 
 	"EvilPumpkin3", 
 	"EvilPumpkin4", 
-	"EvilPumpkin5", 
+	"EvilPumpkin5",
+	"EvilPumpkin6",
+	"EvilPumpkin7",
+	"EvilPumpkin8", 
 ]
 
 var _run_speed := 200

@@ -1,0 +1,142 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Timmy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/blockBrown_broken.png" type="Texture" id=2]
+[ext_resource path="res://assets/flagRed.png" type="Texture" id=3]
+[ext_resource path="res://src/EvilPumpkin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/LevelThree.gd" type="Script" id=5]
+[ext_resource path="res://assets/kisspng-jack-skellington-halloween-pumpkin-costume-party-c-halloween-ghost-town-5a917aec4cdcf1.8673684015194836283148.png" type="Texture" id=6]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "blockBrown_broken.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40, 40 )
+
+[node name="LevelThree" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 6497.0
+margin_bottom = 1634.0
+color = Color( 0.788235, 0.45098, 0.054902, 0.929412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_top = -152.0
+margin_right = 1200.0
+margin_bottom = 581.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="TextureRect" parent="."]
+margin_left = 1200.0
+margin_top = -152.0
+margin_right = 2400.0
+margin_bottom = 581.0
+texture = ExtResource( 6 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background3" type="TextureRect" parent="."]
+margin_left = 2400.0
+margin_top = -152.0
+margin_right = 3600.0
+margin_bottom = 581.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background4" type="TextureRect" parent="."]
+margin_left = 3600.0
+margin_top = -152.0
+margin_right = 4800.0
+margin_bottom = 581.0
+texture = ExtResource( 6 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 75, 0, 0, 131071, 0, 0, 65611, 0, 0, 196607, 0, 0, 131147, 0, 0, 262143, 0, 0, 196683, 0, 0, 327679, 0, 0, 262162, 0, 0, 262219, 0, 0, 393215, 0, 0, 327687, 0, 0, 327755, 0, 0, 458751, 0, 0, 393222, 0, 0, 393223, 0, 0, 393291, 0, 0, 524287, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458827, 0, 0, 589823, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524363, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0, 589861, 0, 0, 589862, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 589866, 0, 0, 589867, 0, 0, 589868, 0, 0, 589869, 0, 0, 589870, 0, 0, 589871, 0, 0, 589872, 0, 0, 589873, 0, 0, 589874, 0, 0, 589875, 0, 0, 589876, 0, 0, 589877, 0, 0, 589878, 0, 0, 589879, 0, 0, 589880, 0, 0, 589881, 0, 0, 589882, 0, 0, 589883, 0, 0, 589884, 0, 0, 589885, 0, 0, 589886, 0, 0, 589887, 0, 0, 589888, 0, 0, 589889, 0, 0, 589890, 0, 0, 589891, 0, 0, 589892, 0, 0, 589893, 0, 0, 589894, 0, 0, 589895, 0, 0, 589896, 0, 0, 589897, 0, 0, 589898, 0, 0, 589899, 0, 0, 1507323, 0, 0 )
+
+[node name="Timmy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23.0659, 544.465 )
+
+[node name="EvilPumpkin" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1678.88, 542.349 )
+
+[node name="EvilPumpkin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1185.56, 223.861 )
+
+[node name="EvilPumpkin3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1622.81, 550.027 )
+
+[node name="EvilPumpkin4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2973.53, 412.094 )
+
+[node name="EvilPumpkin5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3023.96, 346.98 )
+
+[node name="EvilPumpkin6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4301.32, 549.188 )
+
+[node name="EvilPumpkin7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2130.12, 533.872 )
+
+[node name="EvilPumpkin8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4357.71, 549.396 )
+
+[node name="FinishFlag" type="Area2D" parent="."]
+position = Vector2( 4583.99, 548.973 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishFlag"]
+position = Vector2( 0, -16 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="FinishFlag"]
+position = Vector2( 0, -8 )
+texture = ExtResource( 3 )
+[connection signal="throw_pumpkin" from="Timmy" to="." method="_on_throw_pumpkin"]
+[connection signal="timmy_hit" from="EvilPumpkin" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin2" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin3" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin4" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin5" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin6" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin7" to="." method="_on_timmy_hit"]
+[connection signal="timmy_hit" from="EvilPumpkin8" to="." method="_on_timmy_hit"]
+[connection signal="body_entered" from="FinishFlag" to="." method="_on_FinishFlag_entered"]

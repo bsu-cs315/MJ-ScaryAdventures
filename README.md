@@ -17,7 +17,7 @@
 - [X] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [X] C-6: The game is stable and includes some gameplay.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
-- [ ] B-2: The source code and project structure comply with our adopted style guides.
+- [X] B-2: The source code and project structure comply with our adopted style guides.
 - [X] B-3: The game runs to a clear end state.
 - [X] A-1: The game includes a complete traditional player experience loop&mdash;title, gameplay, and ending&mdash;and the player has the option to play again.
 
